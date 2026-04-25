@@ -1,0 +1,99 @@
+<!-- Vibe Coding Session: Activando Aurora Background -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding Demo | Antigravity x UX/UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SVG Filter for Noise/Texture (React Bits Style) -->
+    <svg style="display: none;">
+        <filter id="orb-noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0.1" />
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="0.2" />
+                <feFuncG type="linear" slope="0.2" />
+                <feFuncB type="linear" slope="0.2" />
+            </feComponentTransfer>
+            <feBlend in="SourceGraphic" mode="soft-light" />
+        </filter>
+    </svg>
+
+    <div class="orb-container">
+        <div class="orb-wrapper">
+            <div class="orb-blob orb-1"></div>
+            <div class="orb-blob orb-2"></div>
+            <div class="orb-blob orb-3"></div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">ANTIGRAVITY<span>.</span></div>
+        <div class="nav-links">
+            <a href="#">TikTok</a>
+            <a href="#">Design System</a>
+            <a href="#" class="btn-sm">Proyectos</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="reveal-text">Diseño que cobra <span>Vida</span></h1>
+            <p class="reveal-text-sub">Domina GSAP y animaciones premium sin tocar una sola línea de código compleja. Yo programo, tú creas.</p>
+            <div class="cta-container">
+                <a href="#" class="btn-primary">Ver Demo en TikTok</a>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card glass">
+                <div class="icon">✨</div>
+                <h3>UX UI</h3>
+                <p>Interfaces fluidas y centradas en el usuario.</p>
+            </div>
+            <div class="card glass">
+                <div class="icon">🎨</div>
+                <h3>Design Systems</h3>
+                <p>Consistencia y escalabilidad en WordPress.</p>
+            </div>
+            <div class="card glass">
+                <div class="icon">⚡</div>
+                <h3>GSAP Magic</h3>
+                <p>Micro-interacciones que enamoran.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="portfolio">
+        <h2 class="section-title">Proyectos Seleccionados</h2>
+        <div class="portfolio-grid">
+            <div class="project-card glass">
+                <div class="project-img"></div>
+                <div class="project-info">
+                    <h4>Web App Design</h4>
+                    <span>2024 • Branding</span>
+                </div>
+            </div>
+            <div class="project-card glass">
+                <div class="project-img"></div>
+                <div class="project-info">
+                    <h4>Mobile Interface</h4>
+                    <span>2024 • UI UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
